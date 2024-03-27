@@ -1,0 +1,74 @@
+
+body, html, .container{
+    width: 100%;
+    height: 100%; 
+    background:  url("assets/cafe.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; /* en boy oranını korur*/
+} 
+
+.container, .main:before {
+    background:  url("assets/cafe.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; /* en boy oranını korur*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    margin: 0 auto;
+    overflow: hidden; /* kutu sınırını aşan alanları gizle*/
+    max-width: 768px;
+    padding: 50px;
+    color: white;
+    z-index: 0;
+    position: relative; /* komple blur olur sayfa. container'da kaplar*/
+    font-family: 'Lato', sans-serif; 
+}
+
+.main:before {
+    content: "";
+    filter: blur(20px);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; /* blur olmaz*/
+}
+
+
+.box{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#p, option {
+    color: gray;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%; /* parent'a göre konumlanır*/
+}
+
+
+.totalTip {   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #cd3902;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    display: none;
+}
